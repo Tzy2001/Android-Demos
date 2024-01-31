@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:paddingHorizontal="12dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingHorizontal="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingVertical="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="123" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingHorizontal="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingVertical="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="123" />&ndash;&gt;-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    style="@style/style_table_list_print_prj"-->
+<!--                    android:text="123"-->
+<!--                    android:textSize="16dp"/>-->
+<!--    </LinearLayout>-->
+
+    <Button
+        android:id="@+id/btn_print_failed"
+        android:layout_width="39dp"
+        android:layout_height="20dp"
+        android:background="@drawable/shape_prj_radius"
+        android:gravity="center"
+        android:text="123"
+        tools:text="K1" />
+
+</LinearLayout>

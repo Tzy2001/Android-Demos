@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.telephony" -->
+    <!-- android:required="false" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_SCAN" /> -->
+    <!-- &lt;!&ndash;    <uses-permission android:name="android.permission.WRITE_SETTINGS" />&ndash;&gt; -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> -->
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <!-- maxSdkVersion=30适配到Android11 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Android12新增蓝牙权限 -->
+    <!-- Android 12在不申请定位权限时，必须加上android:usesPermissionFlags="neverForLocation"，否则搜不到设备 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".kotlinPratice.coroutine.androidCoroutinesFlow.view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".kotlinPratice.coroutine.coroutinesImageProcessing.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".kotlinPratice.coroutine.sharedState.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kotlinPratice.coroutine.CoroutinesWithRoom.view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".kotlinPratice.coroutine.coroutinesWithRetrofit.view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name=".TestBlankjActivity" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".webViewDemo.WebViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".navigationDemo.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".networkDemo.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".networkDemo.OkHttpTest"
+            android:exported="true" />
+        <activity
+            android:name=".Konfetti"
+            android:exported="true" />
+        <activity
+            android:name=".editTextDemo.EditTextTest"
+            android:exported="true" />
+        <activity
+            android:name=".contentProvider.ProviderTest"
+            android:exported="true" />
+        <activity
+            android:name=".contentProvider.ContactTest"
+            android:exported="true" />
+        <activity
+            android:name=".contentProvider.MainActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".service.ThreadTest"
+            android:exported="true" />
+        <activity
+            android:name=".bookSQLiteHelper.MyBook"
+            android:exported="false" />
+        <activity
+            android:name=".Room.Room"
+            android:exported="true" />
+        <activity
+            android:name=".HandlerActivity.HandlerActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".HandlerActivity.HandlerActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".HandlerActivity.HandlerActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".HandlerActivity.TestNetworkImage"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantLogoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".contentProviderDemo.MyContentProvider"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
+            android:name=".progressBar.ProgressBarDemo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <provider
+            android:name=".contentProviderDemo.BookProvider"
+            android:authorities="org.wangchenlong.book.provider"
+            android:permission="org.wangchenlong.BOOK_PROVIDER"
+            android:process=":provider" />
+    </application>
+
+</manifest>

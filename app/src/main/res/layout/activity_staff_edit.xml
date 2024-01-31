@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.gingersoft.gsa.cloud.manager.viewmodel.StaffEditViewModel" />
+
+        <variable
+            name="click"
+            type="com.gingersoft.gsa.cloud.manager.mvp.ui.activity.StaffEditActivity.ClickProxy" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f0"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include_topbar"
+            layout="@layout/include_topbar"
+            bind:title="@{vm.title}" />
+        <!--            bind:rightImage="@{@drawable/ic_white_delete}" -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:text="員工賬戶"
+                android:textColor="#ff686868"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="員工姓名"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16dp" />
+            <!--  可修改，必填，最高100個字-->
+            <EditText
+                android:id="@+id/et_staff_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="請輸入員工姓名"
+                android:text="@{vm.staffInfoLiveData.employeeName}"
+                android:inputType="textPersonName"
+                android:maxLength="100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:onClick="@{()->click.showTypeListDialog()}">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="員工職位"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--     可修改，必選，僅老闆組成員可選擇老闆組選項-->
+            <EditText
+                android:id="@+id/et_staff_possion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:text="@{vm.roleIdList}"
+                android:hint="請輸入員工職位"
+                android:inputType="textPersonName" />
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_8"
+                android:paddingRight="8dp"
+                android:src="@drawable/arrow_down_white"
+                android:tint="@color/color_c8"
+                bind:ignore="UseAppTint"
+                tools:ignore="UseAppTint" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="登錄賬戶"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--    不可修改-->
+            <EditText
+                android:id="@+id/et_login_account"
+                android:layout_width="331dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="@{vm.staffInfoLiveData.userName}"
+                android:hint=""
+                android:inputType="none"
+                android:maxLength="12"
+                android:paddingStart="180dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="賬戶密碼"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--        不可修改，密文顯示-->
+            <EditText
+                android:id="@+id/et_account_password"
+                android:layout_width="333dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:text="@{vm.staffInfoLiveData.passWord}"
+                android:hint=""
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingStart="190dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="聯繫方式"
+                android:textColor="#ff686868"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="電話號碼"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--        必填，最高13個數字，僅支持輸入數字，默認數字鍵盤-->
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="281dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:background="@null"
+                android:text="@{vm.staffInfoLiveData.mobile}"
+                android:hint=""
+                android:inputType="none"
+                android:maxLength="13"
+                android:paddingStart="100dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="郵件地址"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--        選填，最高36個數字，必須含@字符，默認字母鍵盤-->
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="331dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="@{vm.staffInfoLiveData.email}"
+                android:hint=""
+                android:inputType="textEmailAddress"
+                android:maxLength="36"
+                android:paddingStart="100dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="啟動狀態"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--    禁用時，對應權限的賬號登錄RicePOS不支持選擇當前餐廳-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/ib_switch"-->
+            <!--                android:layout_width="36dp"-->
+            <!--                android:layout_height="16dp"-->
+            <!--                android:layout_marginEnd="@dimen/dp_16"-->
+            <!--                android:src="@drawable/iv_switch_open" />-->
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="@{vm.staffInfoLiveData.restaurantStatus==1}"
+                android:onCheckedChanged="@{vm.statusListener}"
+                android:thumb="@drawable/shape_thumb_on"
+                android:track="@drawable/selector_switch_track"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#E6E6E6"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/include_btn_confirm"
+                layout="@layout/app_save_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:onClick="@{()->vm.save()}"
+                bind:btnName="@{@string/str_confirm}" />
+
+            <include
+                android:id="@+id/include_btn_delete"
+                layout="@layout/app_save_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->click.clickDelete()}"
+                bind:btnName="@{@string/delete}" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#E6E6E6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:text="員工賬戶"
+                android:textColor="#ff686868"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="員工姓名"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16dp" />
+            <!--  必填，最高100個字-->
+            <EditText
+                android:id="@+id/et_staff_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="請輸入員工姓名"
+                android:inputType="textPersonName"
+                android:maxLength="100"
+                android:paddingStart="200dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="員工職位"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--            必選，多選，僅老闆組成員可選擇老闆組選項，來源：職位管理-->
+            <EditText
+                android:id="@+id/et_staff_possion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="請輸入員工職位"
+                android:inputType="textPersonName"
+                android:paddingStart="180dp" />
+
+            <ImageButton
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/arrow_down_black" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="登錄賬戶"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+
+
+            <!--      必填，最高12個字，必須包含數字和字母   提示：5~12位，需含字母和數字-->
+            <EditText
+                android:id="@+id/et_login_account"
+                android:layout_width="331dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="5-12位，需含字母和數字"
+                android:inputType="text"
+                android:maxLength="12"
+                android:paddingStart="112dp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="賬戶密碼"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--        必填，最高20個字，必須包含數字和字母 提示：6~20位，需含字母和數字-->
+            <EditText
+                android:id="@+id/et_account_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="6-12位，需含字母和數字"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingStart="100dp" />
+
+            <ImageButton
+                android:id="@+id/ib_showpassword"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/selector_eye" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="確認密碼"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--必填，最高20個字，和賬戶密碼一致-->
+            <EditText
+                android:id="@+id/et_password_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="105dp"
+                android:background="@null"
+                android:hint="請確認密碼"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:paddingStart="100dp" />
+
+            <ImageButton
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/selector_eye" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#E6E6E6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="聯繫方式"
+                android:textColor="#ff686868"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="電話號碼"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--        必填，最高13個數字，僅支持輸入數字，默認數字鍵盤-->
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:background="@null"
+                android:hint="請輸入員工電話號碼"
+                android:inputType="number"
+                android:maxLength="13"
+                android:paddingStart="100dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="郵件地址"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--        選填，最高36個數字，必須含@字符，默認字母鍵盤-->
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="請輸入員工郵件地址（選填）"
+                android:inputType="textEmailAddress"
+                android:paddingStart="100dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6E6E6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:text="啟動狀態"
+                android:textColor="#ff3c3c3c"
+                android:textSize="16sp" />
+            <!--    禁用時，對應權限的賬號登錄RicePOS不支持選擇當前餐廳-->
+            <ImageButton
+                android:id="@+id/ib_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/iv_switch_open" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</layout>

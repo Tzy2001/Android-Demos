@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Room.Room">
+
+    <Button
+        android:id="@+id/get_user_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get User" />
+
+    <Button
+        android:id="@+id/add_data_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add User" />
+
+    <Button
+        android:id="@+id/update_data_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update User" />
+
+    <Button
+        android:id="@+id/delete_data_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete User" />
+    <Button
+        android:id="@+id/query_data_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query User" />
+    <Button
+        android:id="@+id/add_book_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Book" />
+    <Button
+        android:id="@+id/query_all_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query All Book" />
+</LinearLayout>

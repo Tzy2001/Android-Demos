@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+<!--    因為應用程序不允許使用明文http只允許https，因此這段配置就是為了打破這個限製，並且需要在Manifest裡面的application中聲明-->
+<!--    android:networkSecurityConfig="@xml/network_config">-->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>

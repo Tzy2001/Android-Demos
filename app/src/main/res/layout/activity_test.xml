@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="登錄賬戶"
+            android:textColor="#ff3c3c3c"
+            android:textSize="16sp" />
+
+
+        <!--      必填，最高12個字，必須包含數字和字母   提示：5~12位，需含字母和數字-->
+        <EditText
+            android:id="@+id/et_login_account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="5-12位，需含字母和數字"
+            android:text="123456"
+            android:inputType="text"
+            android:maxLength="12"
+            android:paddingStart="112dp"
+             />
+
+
+    </LinearLayout>
+</RelativeLayout>

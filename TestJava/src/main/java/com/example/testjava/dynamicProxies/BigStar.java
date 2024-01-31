@@ -1,0 +1,45 @@
+package com.example.testjava.dynamicProxies;
+
+import com.example.testjava.dynamicProxies.Star;
+
+/**
+ * @ClassName BigStar
+ * @Author TZY
+ * @Date 2024/1/18 15:33
+ **/
+public class BigStar implements Star {
+    private String name;
+
+    public BigStar() {
+    }
+
+    public BigStar(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String sing(String name) {
+        System.out.println(this.name+"正在唱"+name);
+        return "谢谢";
+    }
+
+    @Override
+    public void dance() {
+        System.out.println(this.name+"正在跳舞");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "BigStar{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}

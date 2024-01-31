@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentHome"
+    android:id="@+id/nav_graph">
+<fragment
+    android:id="@+id/fragmentHome"
+    android:name="com.example.fragmentpractice.fragment.FragmentHome"
+    android:label="fragmentHome"
+    tools:layout="@layout/item_fragment1">
+    <action
+        android:id="@+id/action_afragment_to_bfragment"
+        app:destination="@+id/fragmentContacts"
+        app:enterAnim="@animator/nav_default_enter_anim"
+        app:exitAnim="@animator/nav_default_exit_anim"/>
+</fragment>
+<fragment
+    android:id="@+id/fragmentContacts"
+    android:name="com.example.fragmentpractice.fragment.FragmentContacts"
+    android:label="fragmentContacts"
+    tools:layout="@layout/item_fragment2"/>
+<fragment
+    android:id="@+id/fragmentDiscovery"
+    android:name="com.example.fragmentpractice.fragment.FragmentDiscovery"
+    android:label="fragmentDiscovery"
+    tools:layout="@layout/item_fragment3"/>
+<fragment
+    android:id="@+id/fragmentMine"
+    android:name="com.example.fragmentpractice.fragment.FragmentMine"
+    android:label="fragmentMine"
+    tools:layout="@layout/item_fragment4"/>
+<fragment
+    android:id="@+id/fragmentE"
+    android:name="com.example.fragmentpractice.fragment.FragmentE"
+    android:label="fragmentE"
+    tools:layout="@layout/item_fragment_5"/>
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/TestJava" />
+            <option value="$PROJECT_DIR$/androidthreadtest" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/broadcastbestpractice" />
+            <option value="$PROJECT_DIR$/chapter06" />
+            <option value="$PROJECT_DIR$/databasetest" />
+            <option value="$PROJECT_DIR$/databasetest/providertest" />
+            <option value="$PROJECT_DIR$/datebasetest" />
+            <option value="$PROJECT_DIR$/fragmentpractice" />
+            <option value="$PROJECT_DIR$/fruitspractice" />
+            <option value="$PROJECT_DIR$/goodtrash" />
+            <option value="$PROJECT_DIR$/imagediscerndemo" />
+            <option value="$PROJECT_DIR$/jetpacktest" />
+            <option value="$PROJECT_DIR$/kotlin-flow" />
+            <option value="$PROJECT_DIR$/mvplibrary" />
+            <option value="$PROJECT_DIR$/notification" />
+            <option value="$PROJECT_DIR$/notification/cameraalbumtest" />
+            <option value="$PROJECT_DIR$/playaudiotest" />
+            <option value="$PROJECT_DIR$/providertest2" />
+            <option value="$PROJECT_DIR$/runtimepermissiontest" />
+            <option value="$PROJECT_DIR$/runtimepermissiontest2" />
+            <option value="$PROJECT_DIR$/shopping" />
+            <option value="$PROJECT_DIR$/socketdemo" />
+            <option value="$PROJECT_DIR$/test" />
+            <option value="$PROJECT_DIR$/testProject" />
+            <option value="$PROJECT_DIR$/testproject" />
+            <option value="$PROJECT_DIR$/uibestpratice" />
+            <option value="$PROJECT_DIR$/webview" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

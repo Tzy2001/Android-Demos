@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+<!--    默認是矩形，當設置為oval之後設置的corners默認無效-->
+<!--    指定了形狀內部的填充顏色-->
+    <solid android:color="#ffdd66"/>
+<!--    製定了形狀輪廓的粗細與顏色-->
+    <stroke
+        android:width="1dp"
+        android:color="#aaaaaa"/>
+<!--    製定了形狀四個圓角的半徑-->
+    <corners android:radius="10dp"/>
+</shape>

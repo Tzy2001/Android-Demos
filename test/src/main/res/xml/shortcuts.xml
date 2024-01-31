@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="first"
+        android:shortcutLongLabel="@string/first_long"
+        android:shortcutShortLabel="@string/first_short">
+        <!-- targetClass指定了点击该项菜单后要打开哪个活动页面 -->
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.test.TestTextViewActivity"
+            android:targetPackage="com.example.test" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="second"
+        android:shortcutLongLabel="@string/second_long"
+        android:shortcutShortLabel="@string/second_short">
+        <!-- targetClass指定了点击该项菜单后要打开哪个活动页面 -->
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.test.Test"
+            android:targetPackage="com.example.test" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    </shortcuts>

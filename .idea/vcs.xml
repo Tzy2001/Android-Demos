@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AndroidSample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BannerViewPager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ContentProviderDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DesginPattern/DesignPattern" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Flow/Learn-Kotlin-Flow" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GSYVideoPlayer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GaodeMapDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MDStudySamples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Scoop" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TencentMapDemo_Android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/android-maps-utils" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bilibili" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/compose-samples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/input-samples" vcs="Git" />
+  </component>
+</project>

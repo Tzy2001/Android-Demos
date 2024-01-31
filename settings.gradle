@@ -1,0 +1,47 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://www.jitpack.io" }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }
+        jcenter()
+    }
+}
+rootProject.name = "My Application"
+include ':app'
+include ':uibestpratice'
+include ':fruitspractice'
+include ':fragmentpractice'
+include ':broadcastbestpractice'
+include ':datebasetest'
+include ':databasetest'
+include ':runtimepermissiontest'
+include ':notification'
+include ':notification:cameraalbumtest'
+include ':jetpacktest'
+include ':playaudiotest'
+include ':runtimepermissiontest2'
+include ':shopping'
+include ':androidthreadtest'
+include ':webview'
+include ':testProject'
+include ':testproject'
+include ':test'
+include ':TestJava'
+include ':chapter06'
+include ':providertest2'
+include ':databasetest:providertest'
+include ':kotlin-flow'
+include ':socketdemo'
+include ':goodtrash'
+include ':mvplibrary'
+include ':imagediscerndemo'

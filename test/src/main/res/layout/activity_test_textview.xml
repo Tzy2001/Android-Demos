@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/ll_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_yellow"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="emailAddress"
+            android:background="@null"
+            android:hint="@string/test_text"
+            android:textCursorDrawable="@color/green" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/test_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/shape_thumb_on"
+            android:track="@drawable/selector_switch_track" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/sp_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        tools:text="spinner" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="phone"
+            android:background="@null"
+            android:hint="@string/test_search"
+            android:textColor="@color/red" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_printing_search" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_show_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/restaurant_color_busy_open"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/show_dialog"/>
+    <Button
+        android:id="@+id/btn_list_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/restaurant_color_busy_open"
+        android:onClick="showList"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/btn_list_dialog"/>
+    <Button
+        android:id="@+id/btn_single_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/restaurant_color_busy_open"
+        android:onClick="showSingleAlertDialog"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/show_dialog"/>
+    <Button
+        android:id="@+id/btn_multiple_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/restaurant_color_busy_open"
+        android:onClick="showMultipleAlertDialog"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/btn_multiple_dialog"/>
+
+    <ImageView
+        android:id="@+id/iv_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/cherry_pic"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/ck_system"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:checked="false"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:text="這是係統的CheckBox"/>
+    <CheckBox
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/switch_selector"
+        android:button="@null"/>
+
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="style_table_list_print_prj">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">#1E8CDC</item>
+
+    </style>
+
+
+</resources>
